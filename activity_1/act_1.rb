@@ -1,4 +1,5 @@
-# 1
+# 1. Use the each method of Array to iterate over [1,2,3,4,5,6,7,8,9,10],
+#   and print out each value
 
 puts "this is my solution to item #1"
 
@@ -6,18 +7,23 @@ numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numArr.each {|num| puts num}
 puts
 
-# 2
+
+# 2. Suppose you have a hash h={a:1, b:2, c:3, d:4}. Get the value of
+#   key :b. Add key:value pair {e:5} to this hash
 
 puts "this is my solution to item #2"
 
-numHash = {a:1, b:2, c:3, d:4}
-puts "Get the value of key :b => #{numHash[:b]}"
+h = {a:1, b:2, c:3, d:4}
+puts "Get the value of key :b => #{h[:b]}"
 
-numHash[:e] = 5
-puts "Add key:value pair {e:5} => #{numHash}"
+h[:e] = 5
+puts "Add key:value pair {e:5} => #{h}"
 puts
 
-# 3
+
+# 3. Given the following data structures. Write a program that copies
+#   the information from the array into the empty hash that applies to
+#   the correct person.
 
 puts "this is my solution to item #3"
 contact_data = [["john@email.com", "123 Main st.", "555-123-4567"],
