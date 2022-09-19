@@ -38,8 +38,37 @@ end
 # 3. Write a while loop that takes input from the user, performs an action,
 #   and only stops when the user types "STOP". Each loop can get info from
 #   the user
+# My program coverts each word inputted by the user into pig latin form
 puts "\nthis is my solution to item #3"
 
+vowels = "aeiouAEIOU"
+while true
+    puts "\nEnter any word. Simply enter 'STOP' to stop"
+    input = gets.chomp
+
+    if input == "STOP"
+        break
+    end
+
+    pig_latin = ""
+    if vowels.include? input[0]
+        pig_latin = input + "yay"
+    else
+        for i in 0...input.length do
+            char = input[i]
+
+            if vowels.include? char
+                first_part = input.slice(i...input.length)
+                second_part = input.slice(0...i) + "ay"
+
+                pig_latin =  first_part + second_part
+                break
+            end
+        end
+    end
+
+    puts pig_latin
+end
 
 # 4. We have given you an array. Write a program that checks to see if the
 #   number is divisible by 2 and store them into a new array.
