@@ -40,8 +40,12 @@ end
 #   the user
 puts "\nthis is my solution to item #3"
 
+
 # 4. We have given you an array. Write a program that checks to see if the
 #   number is divisible by 2 and store them into a new array.
 arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
 
 puts "\nthis is my solution to item #4"
+
+new_arr = arr.select {|num| num % 2 == 0}
+puts "Numbers divisible by 2: #{new_arr}"
