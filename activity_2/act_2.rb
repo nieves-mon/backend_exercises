@@ -4,6 +4,16 @@ arr = [1, 3, 5, 7, 9, 11]
 number = 3
 
 puts "this is my solution to item #1"
+found = false
+
+arr.each do |num|
+    if num == number
+        found = true
+        break
+    end
+end
+
+puts found
 
 
 # 2. Write a program that takes a number from the user between 0 and 100
