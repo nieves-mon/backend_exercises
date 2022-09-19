@@ -21,6 +21,20 @@ puts found
 #   or above 100
 puts "\nthis is my solution to item #2"
 
+puts "Enter a number:"
+user_num = gets.to_i
+
+if user_num < 0
+    puts "#{user_num} is less than 0!"
+elsif user_num >= 0 && user_num <= 50
+    puts "#{user_num} is between 0 and 50!"
+elsif user_num <= 100
+    puts "#{user_num} is between 51 and 100!"
+else
+    puts "#{user_num} is above 100!"
+end
+
+
 # 3. Write a while loop that takes input from the user, performs an action,
 #   and only stops when the user types "STOP". Each loop can get info from
 #   the user
