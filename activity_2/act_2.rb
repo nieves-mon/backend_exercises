@@ -77,11 +77,12 @@ arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
 puts "\nthis is my solution to item #4"
 
 # each version
-# new_arr = []
-# arr.each {|num| new_arr << num unless num % 2 != 0}
+each_arr = []
+arr.each {|num| each_arr << num unless !num.even?}
 
-# select/filter version
-# new_arr = arr.filter {|num| num % 2 == 0}
-new_arr = arr.select {|num| num % 2 == 0}
+puts "Numbers divisible by 2 (each version): #{each_arr}"
 
-puts "Numbers divisible by 2: #{new_arr}"
+# select version
+select_arr = arr.select {|num| num.even?}
+
+puts "Numbers divisible by 2 (filter/select version): #{select_arr}"
