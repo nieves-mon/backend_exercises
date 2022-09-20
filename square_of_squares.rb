@@ -4,15 +4,30 @@
 # integer with itself
 
 def is_square_num(num)
-    for x in 1...num do
+    # for loop version
+    # for x in 1...num do
+    #     if x * x == num
+    #         return true
+    #     end
+
+    #     if x * x > num
+    #         return false
+    #     end
+    # end
+
+
+    # until loop version
+    x = 1
+
+    until x * x > num do
         if x * x == num
             return true
         end
 
-        if x * x > num
-            return false
-        end
+        x += 1
     end
+
+    return false
 end
 
 puts is_square_num(9)       # true
