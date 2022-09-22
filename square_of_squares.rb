@@ -5,7 +5,7 @@
 
 def is_square_num(num)
     # for loop version
-    # for x in 1...num do
+    # for x in 0...num do
     #     if x * x == num
     #         return true
     #     end
@@ -17,7 +17,7 @@ def is_square_num(num)
 
 
     # until loop version
-    x = 1
+    x = 0
 
     until x * x > num do
         if x * x == num
@@ -30,8 +30,9 @@ def is_square_num(num)
     return false
 end
 
-puts is_square_num(9)       # true
-puts is_square_num(4)       # true
-puts is_square_num(13)      # false
-puts is_square_num(189)     # false
-puts is_square_num(121)     # true
+puts "0: #{is_square_num(0)}"       # true
+puts "9: #{is_square_num(9)}"       # true
+puts "4: #{is_square_num(4)}"       # true
+puts "13: #{is_square_num(13)}"      # false
+puts "189: #{is_square_num(189)}"     # false
+puts "121: #{is_square_num(121)}"     # true
