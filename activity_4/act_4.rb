@@ -22,3 +22,10 @@ puts my_profile.full_name
 puts my_profile.age
 puts my_profile.work
 puts my_profile.address
+
+# Expected output:
+# Juan
+# Juan Cruz
+# 25
+# Software Engineer
+# Bulacan
