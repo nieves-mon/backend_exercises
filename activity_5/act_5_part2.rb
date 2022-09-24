@@ -1,47 +1,53 @@
 module AdminPermisson
     def edit_users_profile
-      puts "Admin updated all users profile"
+        puts "Admin updated all users profile"
     end
-  end
+end
 
-  module BuyerPermission
+ module BuyerPermission
     def buy
-      puts "Buyer has bought an item"
+        puts "Buyer has bought an item"
     end
+end
 
-  end
-
-  class User
+class User
     def initialize(username, password, ip_address)
-
+        @username = username
+        @password = password
+        @ip_address = ip_address
     end
 
-    protected
     def login
-      puts "User logged in. IP address: #@{ip_address}"
+      puts "User logged in. IP address: #{@ip_address}"
     end
-  end
+
+    def change_password=(new_password)
+        @password = new_password
+    end
+end
 
 
-  class Admin < User
-  end
+class Admin < User
+    include AdminPermisson
+end
 
 
-  class Buyer < User
-  end
+class Buyer < User
+    include BuyerPermission
+end
 
 
 
   ## execute
 
   my_admin = Admin.new('avionuser', 'password', '127.0.0.1')
-  my_admin.admin_login
+  my_admin.login
   my_admin.edit_users_profile
 
   my_admin.change_password = 'new_password'
 
   buyer = Buyer.new('juan', 'password', '127.0.0.1')
-  buyer.buyer_login
+  buyer.login
   buyer.buy
 
   buyer.change_password = 'new_password'
