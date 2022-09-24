@@ -7,3 +7,6 @@ My solutions to backend exercises for Avion School Bootcamp
 - Activity 3
 - Square of squares
 - Activity 4: Debug code (Profile class)
+- Activity 5: 
+  - 1. Confection class with Cupcake and Banana Cake subclasses
+  - 2. Debug code (User class w/ modules)
