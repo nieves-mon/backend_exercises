@@ -1,31 +1,47 @@
-# Debug the code below.
-class Profile
-    attr_accessor :full_name, :age, :address, :work
+# 1. Create your own object with attributes and methods
+class Pet
+    attr_accessor :type, :name, :sound
 
-    def initialize(full_name, age, address, work)
-        @full_name = full_name
-        @age = age
-        @address = address
-        @work = work
+    def initialize(type, name, sound)
+        @type = type
+        @name = name
+        @sound = sound
+        @hungry = true
+    end
+
+    def make_sound
+        puts "#{@sound}! " * 3
+    end
+
+    def feed
+        if @hungry
+            puts "#{@name} has been fed! :)"
+            @hungry = false
+        else
+            puts "#{@name} is not hunger."
+        end
     end
 end
 
-my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
 
-puts my_profile.full_name
-my_profile.full_name = 'Juan Cruz'
+bonsai = Pet.new("Cat", "Bonsai", "Meow")
+juno = Pet.new("Dog", "Juno", "Bark")
+lady_bridgette = Pet.new("Chicken", "Lady Bridgette", "Cluck")
 
-my_profile.age = 25
-my_profile.work = 'Software Engineer'
+puts "make_sound method"
+bonsai.make_sound   # Meow! Meow! Meow!
+juno.make_sound     # Bark! Bark! Bark!
+lady_bridgette.make_sound   # Cluck! Cluck! Cluck!
 
-puts my_profile.full_name
-puts my_profile.age
-puts my_profile.work
-puts my_profile.address
+puts "\nChange Juno's sound to 'Meow'"
+juno.sound = "Meow"
+juno.make_sound     # Meow! Meow! Meow!
 
-# Expected output:
-# Juan
-# Juan Cruz
-# 25
-# Software Engineer
-# Bulacan
+puts "\nFeed Lady Bridgette"
+lady_bridgette.feed
+
+puts "\nFeed Bonsai"
+bonsai.feed
+
+puts "\nFeed Lady Bridgette again"
+lady_bridgette.feed
