@@ -1,8 +1,8 @@
 def is_isogram(string)
     checked = []
 
-    string.each_char do |char|
-        return false if checked.include?(char.downcase)
+    string.downcase.each_char do |char|
+        return false if checked.include?(char)
         checked << char
     end
 
